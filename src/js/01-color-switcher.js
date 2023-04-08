@@ -19,7 +19,7 @@ function onStartClick() {
     timerID = setInterval(() => {
         document.body.style.backgroundColor = getRandomHexColor()
     }, 1000 )
-   
+
 }
 
 function onStopClick() {
