@@ -87,10 +87,10 @@ function onTimeStart() {
 }
 
 function updateTimeView({ days, hours, minutes, seconds }) {
-  dataDays.innerHTML = addZero(days);
-  dataHours.innerHTML = addZero(hours);
-  dataMinutes.innerHTML = addZero(minutes);
-  dataSeconds.innerHTML = addZero(seconds);
+  dataDays.innerText = addZero(days);
+  dataHours.innerText = addZero(hours);
+  dataMinutes.innerText = addZero(minutes);
+  dataSeconds.innerText = addZero(seconds);
 }
 
 
