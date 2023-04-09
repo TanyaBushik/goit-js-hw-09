@@ -78,7 +78,7 @@ function onTimeStart() {
       const countDown = selectedDate - startTime;
       startBtn.disabled = true;
 
-      if (countDown < 0) {
+      if (countDown <= 0) {
         clearInterval(timerId);
         return;
       }
@@ -87,10 +87,10 @@ function onTimeStart() {
 }
 
 function updateTimeView({ days, hours, minutes, seconds }) {
-  dataDays.textContext = addZero(days);
-  dataHours.textContext = addZero(hours);
-  dataMinutes.textContext = addZero(minutes);
-  dataSeconds.textContext = addZero(seconds);
+  dataDays.innerHTML = addZero(days);
+  dataHours.innerHTML = addZero(hours);
+  dataMinutes.innerHTML = addZero(minutes);
+  dataSeconds.innerHTML = addZero(seconds);
 }
 
 
