@@ -41,9 +41,8 @@ function onPromiseCreate(e) {
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
-
-   form.reset();
+  
   }
-
+ form.reset();
 }
 
