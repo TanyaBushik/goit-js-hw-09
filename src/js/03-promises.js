@@ -6,7 +6,7 @@ const step = document.querySelector('input[name="step"]');
 const amount = document.querySelector('input[name="amount"]');
 const btnCreatePromise = document.querySelector('button[type="submit"]');
 
-btnCreatePromise.addEventListener('submit', onPromiseCreate);
+form.addEventListener('submit', onPromiseCreate);
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
@@ -34,13 +34,11 @@ function onPromiseCreate(e) {
 
     createPromise(i, inputDelay)
       .then(({ position, delay }) => {
-        console.log(success.message)
         Notify.success(
           `✅ Fulfilled promise ${position} in ${delay}ms`
         );
       })
       .catch(({ position, delay }) => {
-        console.log(error.message)
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
 
